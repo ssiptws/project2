@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="styleindex.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="form-popup" id="myForm">
+            <center>
+                <form action="/action_page.php" class="form-container">
+                    <div style="float: right; ">
+                        <span><a href="#" onclick="closeForm()" style="text-decoration: none;color: white">X</a></span>
+                    </div>
+                    <center><h1 style="padding: 10px">Login</h1></center>
+                    <label for="email"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="usrname" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </center>
+        </div>
+        <div class="container">
+            <div class="menu">
+                <ul>
+                    <li class="logo"><img src="logo.png"> </li><li class="active">Home</li>
+                    <li>Artist</li>
+                    <li>Messege</li>
+                    <li>About Us</li>
+                    <li><a href="#" class="signup-btn" onclick="openForm()"><span>Sign Up</span></a></li>
+                </ul>
+            </div>
+            <div class="banner">
+                <div class="inner">
+                    <h1>Online Fest, Pay it <br>with Bitcoin awkwkwkwk</h1>
+                    <p> In this online fest, you should buy<br> ticket using bitcoin, 1 bitcoin for 1 ticket</p>
+                    <div class="play-video">
+                    <div class="inner-play"><i class="fa fa-play" aria-hidden="true"></i></div>
+                        <small><b>Watch Video</b></small>
+                </div>
+                </div>
+                <div class="inner-pict">
+                    <img src="mining.png">
+                </div>
+            </div>
+            <div class="social-icon">
+                <ul>
+                    <li><a><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+</script>
+
+</html>
