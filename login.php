@@ -114,8 +114,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="container">
             <div class="menu">
                 <ul>
-                    <li class="logo"><img src="logo.png"> </li><li class="active">Home</li>
-                    <li>Artist</li>
+                    <li class="logo"></li><li class="active">Home</li>
+                   <li><a href="stage.html" style="color: white">Stages</a></li>
                     <li>Messege</li>
                     <li>About Us</li>
                     <li><a href="#" class="signup-btn" onclick="openForm()"><span>Sign Up</span></a></li>
@@ -123,24 +123,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <div class="banner">
                 <div class="inner">
-                    <h1>Online Fest, Pay it <br>with Bitcoin awkwkwkwk</h1>
-                    <p> In this online fest, you should buy<br> ticket using bitcoin, 1 bitcoin for 1 ticket</p>
-                    <div class="play-video">
-                    <div class="inner-play"><i class="fa fa-play" aria-hidden="true"></i></div>
-                        <small><b>Watch Video</b></small>
-                </div>
-                </div>
-                <div class="inner-pict">
-                    <img src="mining.png">
-                </div>
-            </div>
-            <div class="social-icon">
-                <ul>
-                    <li><a><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
-                </ul>
+                    <h1>DEFQON 1 @ HOME</h1>
+                    <p style="color: white"> If you can’t come to Defqon.1, Defqon.1 comes to you! From June 26th till June 28th, we’ll be bringing you the ultimate online Defqon.1 experience, for free. Prepare yourself for three days of madness with more than 30 artists and featuring every key element of Defqon.1!</p>
             </div>
         </div>
     </body>
