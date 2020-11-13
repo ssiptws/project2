@@ -7,7 +7,7 @@
 .container{
     width: 100%;
     height: 100%;
-    background: url("stages.jpg") no-repeat top center / cover;
+    background: url("../../images/stages.jpg") no-repeat top center / cover;
 
 }
 .menu ul{
