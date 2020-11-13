@@ -90,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html>
     <head>
         <title>Landing Page</title>
-        <link rel="stylesheet" href="styleindex.css">
+        <link rel="stylesheet" href="assets/css/styleindex.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
