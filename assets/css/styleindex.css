@@ -36,7 +36,7 @@
     color: #fff;
     border: 2px solid transparent;
     border-radius: 20px;
-    background-image: linear-gradient(#42455a, #42455a), radial-gradient(circle at top left,#fd00da, #19d7f8);
+    background-image: linear-gradient(#29358a, #262838), radial-gradient(circle at top left,#fd00da, #19d7f8);
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
@@ -175,7 +175,7 @@ small{
 .form-container {
   width: 400px;
   padding: 1%;
-  background-color: #42455a;
+  background-color: #1c1f33;
   color: white;
   position: absolute;
   left: 50%;
@@ -191,6 +191,14 @@ small{
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
+}
+.register{
+	margin: 10px;
+}
+
+.register a{
+	text-decoration: none;
+	color: white;
 }
 
 /* When the inputs get focus, do something */

@@ -108,6 +108,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <input type="password" placeholder="Enter Password" name="password" required> <br>
 					<span class="help-block"><?php echo $password_err; ?></span>
 					<input type="submit" class="btn btn-primary" value="Login">
+					<div class="register">
+						<a href="register.php">Click Here To Register!</a>
+					</div>
                 </form>
             </center>
         </div>
@@ -118,7 +121,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                    <li><a href="stage.html" style="color: white">Stages</a></li>
                     <li>Messege</li>
                     <li>About Us</li>
-                    <li><a href="#" class="signup-btn" onclick="openForm()"><span>Sign Up</span></a></li>
+                    <li><a href="#" class="signup-btn" onclick="openForm()"><span>Login</span></a></li>
                 </ul>
             </div>
             <div class="banner">
