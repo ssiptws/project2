@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+        Input Number Of Row And Coloumn
+    </title> 
+</head> 
+      
+<body> 
+    <center>
+        <big>
+            <form method="get" name="form"> 
+                <h1 style="color:green;"> 
+                    Ceritanya input box
+                </h1> 
+                <input id="messege" type="text" placeholder="Enter Messege" name="messege">
+                <br>
+                <br>
+                <input type="submit" value="Submit" onclick="takecommand()"> 
+            </form> 
+            <p id="demo"></p>
+        </big>
+    </center>
+
+</body> 
+    
+
+<script>
+function takecommand() {
+    var command = document.getElementById("messege").value ;
+    if(command == "/mc"){
+        window.open('matrix.html')
+    }
+//    alert(command);
+    //    document.getElementById("demo").innerHTML = "<b>" + nama +"</b>";
+}
+</script>
+  
+</html> 

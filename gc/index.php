@@ -11,7 +11,7 @@ if(!isset($_SESSION['user_id'])){
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>IMPOSTOR MESSENGER</title>
+        <title>DEFQON DISSCUSSION</title>
         <link rel="stylesheet" href="msgstyle.css"/>
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,9 +21,9 @@ if(!isset($_SESSION['user_id'])){
   		<script src="https://cdn.rawgit.com/mervick/emojionearea/master/dist/emojionearea.min.js"></script>
   		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js"></script>
     </head>  
-    <body class="universal" style="background: url(bgk.png)no-repeat top center / cover; min-height: 100vh; width: 100%; position: relative;">  
+    <body class="universal" style="background: url(../images/stages.jpg)no-repeat top center / cover; min-height: 100vh; width: 100%; position: relative;">  
         <div class="container">
-			<h3 class = "logo" align="center"><span style="color: red">IMPOSTOR</span> Mess<span>enger</span> </h3><br/>
+			<h3 class = "logo" align="center"><span style="color: #FFD300">DEFQON</span> Diss<span>cussion</span> </h3><br/>
 			<div class="hiuser">
 				<div>
 					<h4 >Hi - <?php echo $_SESSION['username']; ?> - <a href="logout.php">Logout</a></h4>
@@ -48,7 +48,7 @@ if(!isset($_SESSION['user_id'])){
 				</div>
 			</div>
 			<div class="form-group" align="right">
-			<button type="button" name="send_group_chat" id="send_group_chat" class="btn btn-info">Send</button>
+			<button type="button" name="send_group_chat" id="send_group_chat" class="btn btn-info" onclick="takecommand()">Send</button>
 			</div>
 		</div>
 	</body>  
@@ -94,6 +94,8 @@ if(!isset($_SESSION['user_id'])){
 
 </style>  
 <script>  
+    
+
 $(document).ready(function(){
 	fetch_group_chat_history();
 	setInterval(function(){
@@ -140,6 +142,18 @@ $(document).ready(function(){
 	$('#send_group_chat').click(function(){
 		var chat_message = $.trim($('#group_chat_message').html());
 		var action = 'insert_data';
+        if(chat_message == "/mc"){
+            $.ajax({
+				url:"../matrix/matrix.html",
+				method:"POST",
+				data:{chat_message:chat_message, action:action},
+				success:function(data){
+					$('#group_chat_message').html('');
+					$('#group_chat_history').html(data);
+                    window.open("../matrix/matrix.html");
+				}
+			})
+        }
 		if(chat_message != '')
 		{
 			$.ajax({
@@ -152,10 +166,10 @@ $(document).ready(function(){
 				}
 			})
 		}
-		else
+        else
 		{
 			alert('Type something');
-		}
+		}  
 	});
 
 	function fetch_group_chat_history()
