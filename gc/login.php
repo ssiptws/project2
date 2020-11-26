@@ -49,9 +49,27 @@ if(isset($_POST['login'])){
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="stylelogin.css" type="text/css">
+    <style>
+        .home{
+            position: absolute;
+            top: 22%;
+            float: right;
+            left: 70%;
+            max-width: 30px;
+            width: 100%;
+            background-color: white;
+            padding: .5px;
+            border-radius: 4px;
+        }
+        .home img{
+            width: 30px;
+            height: auto;
+        }
+    </style>
 </head>
-<body style="background: url(bg2.png) no-repeat top center / cover;">
+<body style="background: url(../images/stages.jpg) no-repeat top center / cover;">
     <div style= "margin: 10%">
+        <div class="home"><a href="../index.php"><img src="../images/home.png"> </a></div>
         <h2>Login</h2> 
         <form method="post">
         <div class="containerlogin">
