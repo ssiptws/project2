@@ -16,6 +16,7 @@
 <body>
 	<div id="wrapper">
 		<h2>Forum</h2>
+		<h3>Categories</h3>
 		<?php
 			require '../config.php';
 			$sql = "SELECT * FROM categories ORDER BY category_title ASC";

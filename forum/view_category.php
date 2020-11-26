@@ -26,7 +26,7 @@
 		if (mysqli_num_rows($res) == 1){
 			$sql2 = "SELECT * FROM topics WHERE category_id='".$id."' ORDER BY topic_reply_date DESC";
 			$res2 = mysqli_connect($link, $sql2);
-			if(mysqli_num_rows($res2) >0) {
+			if(mysqli_num_rows($res2) > 0) {
 				$topic .= "<table width='100%' style='border-collapse:collapse;'>";
 				$topic .= "<tr><td colspan='3'><a href='index.php'>Return to Forum Index</a>".$log."<hr></td></tr>";
 				$topic .= "<tr style='background-color: #dddddd;'><td>Topic Title</td><td width='65' align='center'>Replies</td><td width='65' align='center'>Views</td></tr>";
