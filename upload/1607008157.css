@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+* a{
+	text-decoration: none;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background: url("../../images/stages.jpg") no-repeat top center / cover;
+
+}
+.menu ul{
+    display: inline-flex;
+    margin: 50px;
+}
+.menu ul li{
+    list-style: none;
+    margin: 0 20px;
+    color: white;
+    cursor: pointer;
+}
+.logo img{
+    width: 30px;
+    margin-top: -7px;
+    margin-right: 48px;
+}
+.active{
+    color: #19dafa !important;
+}
+.signup-btn{
+    top: 40px;
+    right: 80px;
+    position: absolute;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#29358a, #262838), radial-gradient(circle at top left,#fd00da, #19d7f8);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.signup-btn span{
+    display: block;
+    padding: 8px 22px;
+}
+.banner{
+    width: 80%;
+    height: 70%;
+    top: 25%;
+    left:135px;
+    position: absolute;
+    color: #fff;
+}
+.inner{
+    width: 50%;
+    float: left;
+}
+.inner h1{
+    font-size: 43px;
+    width: 640px;
+    position: relative;
+    margin-left: 40px;
+}
+.inner p{
+    width: 650px;
+    font-size: 15px;
+    margin: 30px 0 30px 40px;
+    line-height: 25px;
+    color: #919191;
+}
+.inner-pict{
+    width: 50%;
+    float: right;
+}
+.inner-pict img{
+    width: 100%;
+    margin-top: -25px;
+    padding-left: 40px;
+}
+.play-video{
+    margin-left: 40px;
+    display: inline-flex;
+}
+.inner-play{
+    height: 50px;
+    width: 50px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(#42455a, #42455a), radial-gradient(circle at top left,#fd00da, #19d7f8);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    text-align: center;
+}
+.inner-play .fa{
+    padding: 18px 0;
+    font-size: 13px;
+    cursor: pointer;
+}
+small{
+    margin: auto 20px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #19dafa;
+    letter-spacing: 3px;
+}
+.quick-links{
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right,#db1bf6, #19d7f8)
+}
+.quick-links ul{
+    display: inline-flex;
+    margin: 20px auto;
+    text-align: center;
+}
+.quick-links ul li{
+    list-style: none;
+    margin: 0 50px;
+    cursor: pointer
+}
+.quick-links ul li .fa{
+    font-size: 25px;
+    color: #fff;
+}
+.quick-links ul li p{
+    margin-top: 15px;
+    font-size: 10px;
+    color: #fff;
+}
+.social-icon{
+    right: 60px;
+    bottom: 35px;
+    position: absolute;
+}
+.social-icon ul li{
+    list-style: none;
+    margin-top: 15px;
+    text-align: center;
+}
+.social-icon ul li a{
+    color: #999;
+    border-radius: 50%;
+    border: 1px solid #999;
+    padding: 5px;
+    display: block;
+}
+/* The popup form - hidden by default */
+.form-popup {
+/*
+  display: none;
+  position: fixed;
+  top: 30%;
+    left: 55%;
+    margin-top: -100px;
+    margin-left: -200px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+*/
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+/* Add styles to the form container */
+.form-container {
+  width: 400px;
+  padding: 1%;
+  background-color: #1c1f33;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 75%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.register{
+	margin: 10px;
+}
+
+.register a{
+	text-decoration: none;
+	color: white;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #16a085;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.menu a{
+	text-decoration:none;
+}

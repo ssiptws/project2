@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html>
-	<body>
+    <head>
+        <link rel="stylesheet" href="assets/css/floatingback.css"/>
+    </head>
+    <style>
+        .inputglow{
+            border: 1px solid;
+            width: 400px;
+            height: 25px;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;  
+        }
+        .inputglow:hover{
+            outline:none;
+            border: 1px solid #4195fc; 
+            /* create a BIG glow */
+            box-shadow: 0px 0px 5px #4195fc; 
+            -moz-box-shadow: 0px 0px 5px #4195fc;
+            -webkit-box-shadow: 0px 0px 5px #4195fc;  
+        }
+    </style>
+	<body style="background-image: url(images/stages.jpg); color: white">
+        <a href="index.php" class="home-btn">&larrhk;</a>
+        <h1>Complaint Page</h1>
+        <p>Please complete the form below for your complaints.</p>
+        <hr>
 		<form action="upload.php" method="post" enctype="multipart/form-data">
-			<label>Name</label>
-			<input type="text" name="name" id="form1" required>
-			<label>Email</label>
-			<input type="email" name="email" id="form1" required>
-			<label>Phone</label>
-			<input type="tel" name="phone" id="form1" required>
-			<label>Your Complaint</label>
-			<input type="text" name="desc" id="form1" required>
-			<label>Additional Files to upload</label>
-			<input type="file" name="fileToUpload" id="fileToUpload">
-			<input type="submit" value="Submit" name="submit">
+			<h3>Complaint's Name</h3>
+			<input class="inputglow" type="text" name="name" id="form1" required>
+            <br>
+			<h3>Email</h3>
+			<input class="inputglow" type="email" name="email" id="form1" placeholder="Ex : example@email.com" required>
+            <br>
+			<h3>Phone</h3>
+			<input class="inputglow" type="tel" name="phone" id="form1" required>
+            <br><br><hr>
+			<h3>Your Complaint</h3>
+			<input class="inputglow" type="text" name="desc" id="form1" required>
+            <br>
+			<h3>Additional Files to upload</h3>
+			<input style="font-size: 16px" type="file" name="fileToUpload" id="fileToUpload">
+            <br><br>
+			<input style="width: 100px; font-size: 16px" type="submit" value="Submit" name="submit">
 		</form>
 	</body>
 </html>
