@@ -122,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					
 					<input type="submit" class="btn btn-primary" value="Register">
 					<input type="reset" class="btn btn-default" value="Reset">
-					<p>Already have an account? <a href="login.php">Login here</a>.</p>
+					<p>Already have an account? <a href="index.php">Login here</a>.</p>
                 </form>
 			</center>
 		</div>
