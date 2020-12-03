@@ -50,6 +50,8 @@ if(isset($_POST['login'])){
         <title>Landing Page</title>
         <link rel="stylesheet" href="assets/css/styleindex.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/custom.js"></script>
     </head>
     <body>
         <div class="form-popup" id="myForm">
@@ -70,6 +72,26 @@ if(isset($_POST['login'])){
                 </form>
             </center>
         </div>
+        <div class="form-popup" id="myFormSearch" style="color: white">
+            <center>
+                <br><br><br>
+                        
+                <big>
+                <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1">Check Username You Want To Use</label><br>
+                    <input style="height: 30px; width: 400px" type="email" class="form-control" id="search" autocomplete="off" placeholder="Enter Your Name">
+                </div>
+                <br><br>
+                <h5 align="center" id="results-text">Showing results for: <b id="search-string"> </b></h5>
+                <div align="center">
+                    <ul id="results" class="text-decoration;none">
+                    </ul>
+                </div>
+                    <br><br>
+                    <a href="#" onclick="closeFormSearch()" style="color:white"><span>&#10006;</span></a>
+                </big>
+            </center>
+        </div>
         <div class="container">
 		<center>
             <div class="menu">
@@ -80,8 +102,8 @@ if(isset($_POST['login'])){
                     <li><a href="#" onclick="openForm()" style="color: white">Messege</a></li>
                     <li><a href="aboutus.php" style="color: white">About Us</a></li>
                     <li><a href="#" class="signup-btn" onclick="openForm()"><span>Login</span></a></li>
-					
                 </ul>
+                <a href="#" style="font-size:25px" onclick="openFormSearch()">&#128269;</a>
             </div>
 			</center>
             <div class="banner">
@@ -98,6 +120,13 @@ if(isset($_POST['login'])){
 
         function closeForm() {
             document.getElementById("myForm").style.display = "none";
+        }
+        function openFormSearch() {
+            document.getElementById("myFormSearch").style.display = "block";
+        }
+
+        function closeFormSearch() {
+            document.getElementById("myFormSearch").style.display = "none";
         }
 </script>
 
