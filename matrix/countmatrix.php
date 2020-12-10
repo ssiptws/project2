@@ -37,45 +37,60 @@ if(isset($_POST['submit'])){
         }
     }
     
-multiply($mat1, $mat2, $res, $row1, $col1);
-
-echo "<center>";
-echo "<pre>";
+    multiply($mat1, $mat2, $res, $row1, $col1);
+    
+    echo "<style>
+    .matrix{
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 500px;
+        padding: 2%;
+    }
+</style>";
+    echo"<body style='background-image: url(../images/39714699-maths-wallpapers.jpg)'>";
+    echo "<center>";
+    echo "<div class='matrix'>";
+    echo"<big>";
+    echo "<pre>";
 
 //print array
-echo ("First matrix is \n");
-for ($i = 0; $i < $row1; $i++)
-{
-    for ($j = 0; $j < $col1; $j++)
+    echo ("First matrix is \n");
+    for ($i = 0; $i < $row1; $i++)
     {
-        echo ($mat1[$i][$j]);
-        echo(" ");
+        for ($j = 0; $j < $col1; $j++)
+        {
+            echo ($mat1[$i][$j]);
+            echo(" ");
+        }
+        echo ("\n");
     }
-    echo ("\n");
+
+    echo ("Second matrix is \n");
+    for ($i = 0; $i < $row2; $i++)
+    {
+        for ($j = 0; $j < $col2; $j++)
+        {
+            echo ($mat2[$i][$j]);
+            echo(" ");
+        }
+        echo ("\n");
+    }
+
+    echo ("Result matrix is \n");
+    for ($i = 0; $i < $row1; $i++)
+    {
+        for ($j = 0; $j < $row1; $j++)
+        {
+            echo ($res[$i][$j]);
+            echo(" ");
+        }
+        echo ("\n");
+    }
+    echo"</pre>";
+    echo "<a style='text-decoration : none; color: black'; href=matrix.html>Go Back To Input Row and Col</a></center>";
+    echo"</big>";
+    echo "</div>";
+    echo "</center>";
+    echo "</body>";
 }
 
-echo ("Second matrix is \n");
-for ($i = 0; $i < $row2; $i++)
-{
-    for ($j = 0; $j < $col2; $j++)
-    {
-        echo ($mat2[$i][$j]);
-        echo(" ");
-    }
-    echo ("\n");
-}
-
-echo ("Result matrix is \n");
-for ($i = 0; $i < $row1; $i++)
-{
-    for ($j = 0; $j < $row1; $j++)
-    {
-        echo ($res[$i][$j]);
-        echo(" ");
-    }
-    echo ("\n");
-}
-echo"</pre>";
-echo "<a style='text-decoration : none'; href=test.html>Go Back To Input Row and Col</a></center>";
-}
 ?>

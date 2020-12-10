@@ -6,30 +6,40 @@
         Input Number Of Row And Coloumn
     </title> 
 </head> 
-      
-<body> 
+<style>
+    .matrix{
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 500px;
+    }
+    .matrix form{
+        padding: 2%;
+    }
+</style>
+<body style="background-image: url(../images/39714699-maths-wallpapers.jpg)"> 
     <center>
         <big>
-            <form method="get" name="form" action="inputmatrix.php"> 
-                <h1 style="color:green;"> 
-                    Input Row x Col Matrix 1
-                </h1> 
-                <input type="text" placeholder="Enter Row" name="row1">
-                <input type="text" placeholder="Enter Coloumn" name="col1"> 
+            <div class="matrix">
+                <form method="get" name="form" action="inputmatrix.php"> 
+                    <h2> 
+                        Input Row x Col Matrix 1
+                    </h2> 
+                    <input type="text" placeholder="Enter Row" name="row1">
+                    <input id="col" type="text" placeholder="Enter Coloumn" name="col1"> 
         
         
-                <h1 style="color:green;"> 
-                    Input Row x Col Matrix 2
-                </h1> 
-                <input type="text" placeholder="Enter Row" name="row2">
-                <input type="text" placeholder="Enter Coloumn" name="col2"> 
-                <br>
-                <br>
-                <input type="submit" value="Submit"> 
-            </form> 
+                    <h2> 
+                        Input Row x Col Matrix 2
+                    </h2> 
+                    <input id="row" type="text" placeholder="Enter Row" name="row2">
+                    <input type="text" placeholder="Enter Coloumn" name="col2"> 
+                    <br>
+                    <br>
+                    <input style="width: 75px; height: 25px" type="submit" value="Submit" onclick="checkmatrix()">
+                    <br>
+                    <p id="warning"></p>
+                </form>
+            </div>
         </big>
     </center>
-
 </body> 
-  
 </html> 
