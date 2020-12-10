@@ -22,6 +22,7 @@ if ($col1 == $row2){
     .matrix{
         background-color: rgba(255, 255, 255, 0.8);
         width: auto;
+        margin: 10%;
     }
     .matrix form{
         padding: 2%;

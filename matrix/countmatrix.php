@@ -44,6 +44,7 @@ if(isset($_POST['submit'])){
         background-color: rgba(255, 255, 255, 0.8);
         width: 500px;
         padding: 2%;
+        margin: 10%;
     }
 </style>";
     echo"<body style='background-image: url(../images/39714699-maths-wallpapers.jpg)'>";
