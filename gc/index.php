@@ -154,6 +154,18 @@ $(document).ready(function(){
 				}
 			})
         }
+        if(chat_message == "/t"){
+            $.ajax({
+				url:"../telegram_handling/telegram.php",
+				method:"POST",
+				data:{chat_message:chat_message, action:action},
+				success:function(data){
+					$('#group_chat_message').html('');
+					$('#group_chat_history').html(data);
+                    window.open("../telegram_handling/telegram.php");
+				}
+			})
+        }
 		if(chat_message != '')
 		{
 			$.ajax({
