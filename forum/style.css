@@ -1,6 +1,6 @@
 body{
 	font-family: 'Montserrat', sans-serif;
-	background-image:url(bg.jpg);
+	background-image:url(../images/stages.jpg);
 	overflow-x: hidden; /* Hide horizontal scrollbar */
 	background-position: center;
 	background-repeat: no-repeat;
@@ -26,12 +26,12 @@ body{
 	background: #555;
 }
 .row{
-	background-color: black;
-	color:white;
-	height: 150px;
+	background-color: white;
+	color:rgb(0, 38, 77);
+	height: 100px;
  }
 .title{
-	color:white;
+	color:rgb(0, 38, 77);
 	text-decoration: none;
 	font-size:40px;
 	margin-bottom: 20px;
@@ -41,61 +41,38 @@ body{
 hr{
 	font-weight: bold;
 }
-table{
-	margin-left:385px;
-}
 #Title2{
 	color:white;
 	font-size:40px;
-	background-color: rgba(24,24, 24, 0.7);
 	padding: 30px 20px 30px 20px;
 	width:30%;
-	margin-left: 525px;
+	margin-left: 34%;
 }
 #titlerow{
-	background-color: black;
+	background-color: white;
 }
 #titlerow td{
-	color:white;
-	height: 100px;
+	color:rgb(0, 38, 77);
+	height: 75px;
 	font-size: 30px;
 	font-weight: bold;
 	margin-left: 20px;
 }
-table{
-	margin-left: 380px;
-}
 #tablerow{
-	background-color: #b69bd5;
+	background-color: rgba(0,0,0,0);
 	height:100px;
 }
 #titlerow1{
 	color:white;
 	text-decoration: none;
 	font-size:25px;
-	font-weight: bold;
-}
-#create{
-	background-color: rgba(24,24, 24, 1);
-	padding: 30px 50px 30px 50px;
-	width:20%;
-	font-size:20px;	
-	text-decoration: none;
-	margin-left:-380px;
-	margin-bottom:30px;
-	color:white;
-	margin-top:30px;
-}
-#create:hover{
-	color:#6acff6;
 }
 #title{
 	color:white;
 	font-size:40px;
-	background-color: rgba(24,24, 24, 0.7);
-	padding: 30px 1px 30px 1px;
+	padding: 30px;
 	width:30%;
-	margin-left: 525px;
+	margin-left: 33%;
 	margin-bottom:-20px;
 }
 #circle1{
@@ -121,38 +98,39 @@ table{
 	border-radius: 50%;
 }
 table{
-	margin-left:460px;
+	margin-left:25.5%;
 }
 tr{
-	background-color: black;
+	background-color:;
 	color:white;
 }
 td{
 	vertical-align:middle;
 }
+/*
 #content1{
 	background-color: white;
 	padding-top: 2px;
 	width:40%;
 	height: 360px;
 	color:white;
-	margin-left: 460px;
-	margin-top:25px;
-	margin-bottom:105px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+	margin-left: 30%;
+	margin-top:5%;
+	margin-bottom:10%;  
 }
-textarea{
-	width: 80%;
-	color:black;
-	padding: 12px 20px;
-	box-sizing: border-box;
-	margin-bottom:20px;
-	background-color: white;
-	border:none;
-	border-bottom:3px solid black;
-}
+*/
+input[type=text], textarea{
+            width: 80%;
+            color:rgb(0, 38, 77);
+            padding: 12px 20px;
+            box-sizing: border-box;
+            margin-bottom:20px;
+            border:1px solid black;
+            border-bottom:3px solid black;
+            border-right:3px solid black;
+         }
 input[type=submit] {
-	background-color: #6ACFF6; 
+	background-color: #2ecc71; 
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -164,10 +142,9 @@ input[type=submit] {
 	cursor: pointer;
 	width: 80%;
 	font-size: 20px;
-	font-family: 'Josefin Sans', sans-serif;
 }
 input[type=submit]:hover {
-	background-color: #2ebff4;
+	background-color: #3498db;
 }
 #title1{
 	color:black;
@@ -181,4 +158,65 @@ input[type=submit]:hover {
 	padding-top: -20px;
 	margin-top: -10px;
 	font-weight: bold;
+}
+#create{
+    background:#2ecc71;
+    display: block;
+    padding: 20px;
+	width:15%;
+    text-decoration: none;
+	font-size:20px;
+    text-align: center;
+    color: white;
+    transition: ease all 0.3s;
+    position: fixed;
+    right: 30px;
+    bottom:30px;
+    z-index: 10;
+}
+#create:hover{
+    background: #3498db;
+}
+#contentctop{
+    background-color: white;
+         padding-top: 2px;
+         width:40%;
+         height: 490px;
+         color:white;
+         margin-left: 30.5%;
+         margin-top:5%;
+         margin-bottom:10%;
+}
+.p1{
+    color: black;
+}
+#container-pop-up{
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.65); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+#contenttop{
+    background-color: white;
+    color: rgb(0, 38, 77);
+    padding: 30px;
+    font-size: 18px;
+}
+.back{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+#titlerep{
+	color:white;
+	font-size:30px;
+	font-weight: bold;
+	font-family:
 }

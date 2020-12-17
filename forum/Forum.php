@@ -19,15 +19,16 @@
 					$sql= "SELECT * FROM categories ORDER BY category_title ASC";
 					$res = mysqli_query($conn,$sql);
 					$categories="";
-					echo"<h1 id='Title2'>Categories</h1>";
+					echo"<h1 id='Title2'><span style='color:yellow'>CATEG</span>ORIES</h1>";
+                    echo"<a style='margin-left:40%;' class='back' href='../index.php'><u>Back to Home</u></a>";
 					if(mysqli_num_rows($res)>0){
-						$categories = "<table width='50%' style='border-collapse:collapse;'>";
+						$categories = "<table width='50%'>";
 						while($row=mysqli_fetch_assoc($res)){
 							$id=$row['id'];
 							$title=$row['category_title'];
 							$description=$row['category_description'];                       
 							$categories .= "<tr class='row'><td><a href='view_category.php?cid=".$id."' class='title'>".$title."</a><br><br> <span class='post_info'>".$description."</span></td></tr>";
-							$categories .= "<tr><td colspan='3'><hr/></td></tr>";                    
+							$categories .= "<tr><td colspan='3'></td></tr>";                    
 						}
 						$categories.="</table>";
 						echo $categories;

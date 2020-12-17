@@ -99,8 +99,9 @@ if(isset($_POST['login'])){
                     <li class="logo"></li>
 					<li class="active"><a href="index.php">Home</a></li>
                     <li><a href="stage.html" style="color: white">Stages</a></li>
-                    <li><a href="#" onclick="openForm()" style="color: white">Messege</a></li>
+                    <li><a href="gc/index.php" onclick="openForm()" style="color: white">Messege</a></li>
                     <li><a href="contactus.html" style="color: white">Customer Care</a></li>
+                    <li><a href="forum/Forum.php" style="color: white">Forum</a></li>
                     <li><a href="aboutus.php" style="color: white">About Us</a></li>
                     <li><a href="#" class="signup-btn" onclick="openForm()"><span>Login</span></a></li>
                 </ul>
