@@ -39,17 +39,17 @@
 							}
 							$date=$row['topic_date'];
 							$creator=$row['topic_creator'];
-							$topics .= "<tr id='tablerow'><td><a id='titlerow1'href='view_topic.php?cid=".$cid."&tid=".$tid."'>".$title."</a><br/><br/><span class='post_info'>Posted by: ".$creator." on ".$date."</span></td><td align='center'>".$reply."</td><td align='center'>".$views."</td></tr>";
+							$topics .= "<tr id='tablerow'><td><a id='titlerow1'href='view_topic.php?cid=".$cid."&tid=".$tid."'><b>".$title."</b></a><br/><br/><span class='post_info'>Posted by: ".$creator."<br>".$date."</span></td><td align='center'>".$reply."<span> reply(ies)</span></td><td align='center'>".$views."<span> viewer(s)</span></td></tr>";
 						}
 						$topics.="</table>";
 						echo $topics;
 					}
 					else{
-						echo"<p id='error'>There are no topics yet</p>";
+						echo"<p style='color:white' id='error'>There are no topics yet</p>";
 					}
 				}
 				else{
-					echo"<a href='Forum.php'>Return to Forum Index</a>";
+					echo"<a style='color:white' href='Forum.php'>Return to Forum Index</a>";
 				}
 			?>
         </div>

@@ -12,7 +12,6 @@
 		<title>Forum</title>
 		<link rel="stylesheet" href="style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@500&display=swap" rel="stylesheet">
-		<link href="google.com">
 	</head>
 	<body>
 		<header>
@@ -30,14 +29,14 @@
 							$id=$row['id'];
 							$title=$row['category_title'];
 							$description=$row['category_description'];                       
-							$categories .= "<tr class='row'><td><a href='view_category.php?cid=".$id."' class='title'>".$title."</a><br><br> <span class='post_info'>".$description."</span></td></tr>";
+							$categories .= "<tr class='row'><td><a href='view_category.php?cid=".$id."' class='title'>".$title."</a><br> <td class='post_info'>".$description."</td></td></tr>";
 							$categories .= "<tr><td colspan='3'></td></tr>";                    
 						}
 						$categories.="</table>";
 						echo $categories;
 					}
 					else{
-						echo"<p>There are no categories</p>";
+						echo"<p style='color: white'>No categories</p>";
 					}
 				?>
 			</div>
