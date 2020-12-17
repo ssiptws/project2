@@ -13,7 +13,7 @@ if(!isset($_SESSION['user_id'])){
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>DEFQON 1 DISSCUSSION</title>
         <link rel="stylesheet" href="msgstyle.css"/>
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/mervick/emojionearea/master/dist/emojionearea.min.css">
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
