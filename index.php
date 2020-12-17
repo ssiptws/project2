@@ -2,10 +2,6 @@
 include('gc/database_connection.php');
 session_start();
 $message = '';
-if(isset($_SESSION['user_id'])){
-	header('location:index.php');
-}
-
 if(isset($_POST['login'])){
 	$query = "
 		SELECT * FROM login 
@@ -32,8 +28,7 @@ if(isset($_POST['login'])){
 				$statement = $connect->prepare($sub_query);
 				$statement->execute();
 				$_SESSION['login_details_id'] = $connect->lastInsertId();
-				header('location:gc/index.php');
-				echo"sukses";
+				header('location:index.php');
 			}
 			else{
 				$message = '<label>Wrong Password</label>';

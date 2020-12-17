@@ -1,6 +1,5 @@
 <?php
    session_start();
-   
    ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +12,6 @@
         <link rel="stylesheet" href="../assets/css/floatingback.css"/>
 	</head>
 	<body>
-        
 		<header>
 		<h1 id="title"><span style="color:yellow">TOP</span>ICS</h1>
             <a style="margin-left:40%;" class="back" href="Forum.php"><u>Back to Category</u></a>
@@ -31,13 +29,17 @@
 						$topics = "<table width='50%' style='border-collapse:collapse;'>";
 						$topics .="<tr id='titlerow'><td width='65'>Title</td><td width='65' align='center'>Replies</td><td width='65' align='.center'>Views</td></tr>";
 						$topic = "<tr><td colspan='3'><hr/></td><tr>";
-						while($row=mysqli_fetch_assoc($res2)){
-							$tid=$row['id'];
-							$title=$row['topic_title'];
-							$views=$row['topic_views'];
+						while($row = mysqli_fetch_assoc($res2)){
+							$tid = $row['id'];
+							$title = $row['topic_title'];
+							$views = $row['topic_views'];
+							$res3 = mysqli_query($conn, "SELECT COUNT(topic_id) AS B FROM posts WHERE topic_id = '".$tid."'");
+							while ($replies = mysqli_fetch_assoc($res3)){
+								$reply = $replies['B'];
+							}
 							$date=$row['topic_date'];
 							$creator=$row['topic_creator'];
-							$topics .= "<tr id='tablerow'><td><a id='titlerow1'href='view_topic.php?cid=".$cid."&tid=".$tid."'>".$title."</a><br/><br/><span class='post_info'>Posted by: ".$creator." on ".$date."</span></td><td align='center'>0</td><td align='center'>".$views."</td></tr>";
+							$topics .= "<tr id='tablerow'><td><a id='titlerow1'href='view_topic.php?cid=".$cid."&tid=".$tid."'>".$title."</a><br/><br/><span class='post_info'>Posted by: ".$creator." on ".$date."</span></td><td align='center'>".$reply."</td><td align='center'>".$views."</td></tr>";
 						}
 						$topics.="</table>";
 						echo $topics;

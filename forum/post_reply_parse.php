@@ -9,7 +9,7 @@ if(isset($_POST['reply_submit'])){
     }
     else{
 		require 'db.inc.php';
-		$creator=$_SESSION['user_id'];
+		$creator=$_SESSION['username'];
 		$reply_content=$_POST['reply_content'];
 		$sql="INSERT INTO posts(category_id,topic_id,post_creator,post_content, post_date) VALUES ('".$cid."','".$tid."','".$creator."','".$reply_content."', now())";
 		$res=mysqli_query($conn,$sql);

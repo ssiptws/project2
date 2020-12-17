@@ -4,25 +4,25 @@
 <!DOCTYPE html>
 
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Portofolio</title>
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="../assets/css/floatingback.css">
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@500&display=swap" rel="stylesheet">
-   </head>
-   <body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Forum</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="../assets/css/floatingback.css">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	</head>
+	<body>
 		<header>
 			<h1 id="title"><span style="color:yellow">PO</span>ST</h1>
             <a class="back" href="Forum.php"><u>Back to Category</u></a>
 			<div id="content">
 				<?php
 					require 'db.inc.php';
-					$cid=$_GET['cid'];
-					$tid=$_GET['tid'];
-					$sql="SELECT * FROM topics WHERE category_id='".$cid."' AND id='".$tid."' LIMIT 1";
-					$res=mysqli_query($conn,$sql);
+					$cid = $_GET['cid'];
+					$tid = $_GET['tid'];
+					$sql = "SELECT * FROM topics WHERE category_id='".$cid."' AND id='".$tid."' LIMIT 1";
+					$res = mysqli_query($conn,$sql);
 					if(mysqli_num_rows($res)==1){
 						echo"<table style='margin-left: 30%' width='40%'>";
 						while($row=mysqli_fetch_assoc($res)){
@@ -31,10 +31,10 @@
 							while($row2=mysqli_fetch_assoc($res2)){
 								echo"<tr><td valign='middle'><div><br/> ".$row2['post_creator']." - ".$row2['post_date']."<p id='contenttop'>".$row2['post_content']."</p></div></td></tr>";
 							}
-						$old_views=$row['topic_views'];
-						$new_views=$old_views + 1;
-						$sql3="UPDATE topic SET topic_views='".$new_views."' WHERE category_id='".$cid."'AND id='".$tid."' LIMIT 1";
-						$res3=mysqli_query($conn,$sql3);
+						$old_views = $row['topic_views'];
+						$new_views = $old_views + 1;
+						$sql3 = "UPDATE topics SET topic_views='".$new_views."' WHERE category_id='".$cid."'AND id='".$tid."' LIMIT 1";
+						$res3 = mysqli_query($conn,$sql3);
 						}
 						echo"</table>";
 					}
@@ -70,7 +70,6 @@
             document.getElementById("create").style.display = "none";
             document.getElementById("return").style.display = "block";
         }
-
         function closeForm() {
             document.getElementById("container-pop-up").style.display = "none";
             document.getElementById("create").style.display = "block";
