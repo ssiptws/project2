@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	
-	if(!isset($_SESSION["loggedin"])){
+	if(!isset($_SESSION["user_id"])){
 		header("location: ../index.php");
 		exit;
 	}
@@ -11,12 +11,16 @@
 ?>
 <head>
 	<title>Forum</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
 	<div id="wrapper">
+	<link rel="stylesheet" href="style.css">
 		<h2>Forum</h2>
 		<h3>Categories</h3>
+		<hr>
 		<?php
 			require '../config.php';
 			$sql = "SELECT * FROM categories ORDER BY category_title ASC";
@@ -26,7 +30,7 @@
 					$id = $row['id'];
 					$title = $row['category_title'];
 					$description = $row['category_description'];
-					$categories = "<a href='view_category.php?id=".$id."' class='cat_links'>" .$title." <span>" .$description."</span></a>";
+					$categories = "<div id='cat'><a href='view_category.php?id=".$id."' class='cat_links'>" .$title." <p>" .$description."</p></a></div>";
 				}
 				echo $categories;
 			}else{
