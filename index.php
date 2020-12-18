@@ -28,7 +28,11 @@ if(isset($_POST['login'])){
 				$statement = $connect->prepare($sub_query);
 				$statement->execute();
 				$_SESSION['login_details_id'] = $connect->lastInsertId();
-				header('location:index.php');
+//				header('location:index.php');
+                echo "<script>
+                    alert('Login Success');
+                    window.location.href='index.php';
+                    </script>";
 			}
 			else{
 				$message = '<label>Wrong Password</label>';
@@ -94,7 +98,7 @@ if(isset($_POST['login'])){
                     <li class="logo"></li>
 					<li class="active"><a href="index.php">Home</a></li>
                     <li><a href="stage.html" style="color: white">Stages</a></li>
-                    <li><a href="gc/index.php" onclick="openForm()" style="color: white">Messege</a></li>
+                    <li><a href="gc/index.php" style="color: white">Messege</a></li>
                     <li><a href="contactus.html" style="color: white">Customer Care</a></li>
                     <li><a href="forum/Forum.php" style="color: white">Forum</a></li>
                     <li><a href="aboutus.php" style="color: white">About Us</a></li>

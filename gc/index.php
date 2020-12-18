@@ -20,8 +20,10 @@ if(!isset($_SESSION['user_id'])){
   		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   		<script src="https://cdn.rawgit.com/mervick/emojionearea/master/dist/emojionearea.min.js"></script>
   		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js"></script>
+        <link rel="stylesheet" href="../assets/css/floatingback.css"/>
     </head>  
     <body class="universal" style="background: url(../images/stages.jpg)no-repeat top center / cover; min-height: 100vh; width: 100%; position: relative;">  
+        <a href="../index.php" class="home-btn">&larrhk;</a>
         <div class="container">
 			<h3 class = "logo" align="center"><span style="color: #FFD300">DEFQON 1</span> Diss<span>cussion</span> </h3><br/>
 			<div class="hiuser">
